@@ -4,8 +4,7 @@ on:
   pull_request:
     types:
       - closed
-      - opened
-
+     
 jobs:
   excute-test-cases:
     name: excute-test-cases
