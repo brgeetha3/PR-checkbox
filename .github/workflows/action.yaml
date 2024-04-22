@@ -2,7 +2,9 @@ name: Execute test cases
 
 on:
   pull_request:
-    types: [closed]
+    types:
+      - closed
+      - opened
 
 jobs:
   excute-test-cases:
