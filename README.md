@@ -1,1 +1,1 @@
-# PR-title-action
+# PR checkbox action
