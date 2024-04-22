@@ -1,4 +1,4 @@
-name: Execute test cases
+name: Execute test casess
 
 on:
   pull_request:
