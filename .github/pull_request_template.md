@@ -1,4 +1,5 @@
 ## DO NOT EDIT
+## Please pick the test you would like to run
 
-### Action
-- [ ] Execute end to end test
+- [ ] Unit Testing
+- [ ] Performance Testing
