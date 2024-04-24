@@ -12,14 +12,14 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: execute test case
         run: |
-          description="${{ github.event.pull_request.body }}"
-          UNCHECKED="\[ \] execute end to end test"
-          MARKED="\[x\] execute end to end test"
-           if echo ${description,,} | grep -q "$MARKED"; then
-            echo "test execution code goes here..."
+          UNCHECKED="\[ \] integration test"
+          MARKED="\[x\] integration test"
+           if echo ${BODY,,} | grep -q "$MARKED"; then
+            echo "Checkbox is checked"
             exit 0
-          elif echo ${description,,} | grep -q "$UNCHECKED"; then
-            echo "Checkbox is not checked.. skip execution.."
+          elif echo ${BODY,,} | grep -q "$UNCHECKED"; then
+            echo "Checkbox is not checked"
+            exit 1
           else
             echo "Checkbox not found in pull request description"
             exit 1
