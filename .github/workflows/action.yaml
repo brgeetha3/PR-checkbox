@@ -1,9 +1,8 @@
 name: Execute test cases
 on:
   pull_request:
-    types:
-      - closed
-     
+    types: [closed]
+
 jobs:
   excute-test-cases:
     name: excute-test-cases
@@ -14,8 +13,8 @@ jobs:
       - name: execute test case
         run: |
           description="${{ github.event.pull_request.body }}"
-          UNCHECKED="\[ \] Unit Testing"
-          MARKED="\[x\] Unit Testing"
+          UNCHECKED="\[ \] execute end to end test"
+          MARKED="\[x\] execute end to end test"
            if echo ${description,,} | grep -q "$MARKED"; then
             echo "test execution code goes here..."
             exit 0
