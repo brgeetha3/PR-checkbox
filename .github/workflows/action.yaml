@@ -20,6 +20,7 @@ jobs:
             exit 0
           elif echo ${description,,} | grep -q "$UNCHECKED"; then
             echo "Checkbox is not checked.. skip execution.."
+            exit 1
           else
             echo "Checkbox not found in pull request description"
             exit 1
